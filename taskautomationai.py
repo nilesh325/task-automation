@@ -64,7 +64,6 @@ if __name__ == '__main__':
         elif 'the time' in query:
             strtime = datetime.datetime.now().strftime(("%H:%M:%S"))
             speak(f"the time is :{strtime}")
-            #     print(e)
-             #    speak("sorry my friend : i can't send email")'''
+            
 
 
