@@ -2,7 +2,6 @@ import pyttsx3
 import datetime
 import speech_recognition as sr
 import wikipedia
-import openai
 import webbrowser
 import os
 import smtplib
@@ -45,18 +44,10 @@ def takecommand():
         return "None"
 
     return query
-
-'''def sendEmail(content,to):
-    server = smtplib.SMTP('smntp.gmail.com',587)
-    server.ehlo()
-    server.starttls()
-    server.login('saraswatnilesh3@gmail.com','your-password')
-    server.sendemail('youremail@gmail.com',to,content)
-    server.close()'''
-       
+    
 if __name__ == '__main__':
     wishme()
-    while 1: #while true for infinite time
+    while true: #while true for infinite time
         query = takecommand().lower()
         if 'wikipedia' in query:
             speak('searching wikipedia.....')
@@ -70,27 +61,9 @@ if __name__ == '__main__':
             webbrowser.open("youtube.com")
         elif 'open google' in query:
             webbrowser.open("google.com")
-        #elif "play song" in query:
-            '''music_dir = "address"
-            songs= os.listdir(music_dir)
-            print(songs)
-            os.startfile(os.path.join(music,songs[0]))'''
         elif 'the time' in query:
             strtime = datetime.datetime.now().strftime(("%H:%M:%S"))
             speak(f"the time is :{strtime}")
-
-        #f 'opencode' in query:
-            #codepath="C:\Users\saras\OneDrive\Desktop\Visual Studio Code.lnk"
-            #os.startfile(codepath)
-
-      #elif 'email to nilesh' in query:
-          #  try:
-               # speak("what should i say?")
-               # content = takecommand()
-               #  to = "saraswatnilesh3@gmail.com"
-             #    sendEmail(to,content)
-            #     speak("email has been sent!")
-         #    except Exception as e:
             #     print(e)
              #    speak("sorry my friend : i can't send email")'''
 
