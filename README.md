@@ -1,2 +1,2 @@
 # task-automation
-provides some basic tasks automation 
+purpose of this is to provide basic tasks automation
